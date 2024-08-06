@@ -12,6 +12,51 @@
 * PostgreSQL
 * Docker
 
+## Структура проекта
+
+```
+demo
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── example
+│   │   │           └── demo
+│   │   │               ├── DemoApplication.java
+│   │   │               ├── config
+│   │   │               │   ├── GoogleConfig.java
+│   │   │               │   └── TextConfig.java
+│   │   │               ├── controller
+│   │   │               │   ├── TextController.java
+│   │   │               ├── dto
+│   │   │               │   ├── TextRequest.java
+│   │   │               │   └── TextResponse.java
+│   │   │               ├── exception
+│   │   │               │   ├── GlobalExceptionHandler.java
+│   │   │               │   ├── LanguageNotFoundException.java
+│   │   │               │   └── TranslationResourceAccessException.java
+│   │   │               ├── repository
+│   │   │               │   └── TranslationRepository.java
+│   │   │               ├── service
+│   │   │               │   ├── TextService.java
+│   │   │                   └── impl
+│   │   │                       └── TextServiceImplTest.java
+│   │   └── resources
+│   │       └── application.yml
+│   └── test
+│       └── java
+│           └── com
+│               └── example
+│                   └── demo
+│                       ├── DemoApplicationTests.java
+│                       └── service
+│                       │   └── TextServiceImplTest.java
+│                       └── controller
+│                           └── TextControllerTest.java
+└── pom.xml
+
+```
+
 ## Запуск
 
 #### 1) Скопируйте приложение:
@@ -34,14 +79,21 @@ docker build ./ -t webapi
 ```
 docker-compose up -d
 ```
-Приложение начнет работать по адресу http://localhost:8080
-Для отслеживания изменений в базе данных перейдите по адресу http://localhost:8081. Вы увидите интерфейс Adminer. Используйте следующие данные для входа:
+Приложение начнет работать по адресу [http://localhost:8080](http://localhost:8080) и уже готово к использованию.
+Для отслеживания изменений в базе данных перейдите по адресу [http://localhost:8081](http://localhost:8081). Вы увидите интерфейс Adminer. Используйте следующие данные для входа:
 
 * System: PostgreSQL
 * Server: db
 * Username: user
 * Password: password
 * Database: translations
+
+#### 5) Остановка и удаление контейнеров:
+Для остановки и удаления контейнеров воспользуйтесь командой:
+
+```
+docker-compose down 
+```
   
 При желании данные для входа можно изменить. Для этого в файле application.yaml измените необходимые параметры:
 
@@ -81,3 +133,27 @@ services:
 ```
 ## Использование
 
+1. Откройте браузер и перейдите по адресу [http://localhost:8080](http://localhost:8080).
+   
+2. В интерфейсе вы увидите следующее:
+
+    - Два выпадающих списка для выбора исходного языка (From) и целевого языка (To).
+    - Поле для ввода текста, который необходимо перевести (Enter text to translate).
+    - Поле для отображения переведенного текста (Your translated text).
+    - Кнопка "Translate" для запуска процесса перевода.
+
+3. Взаимодействие с интерфейсом:
+
+    - Выберите исходный язык в выпадающем списке "From".
+    - Выберите целевой язык в выпадающем списке "To".
+    - Введите текст, который вы хотите перевести, в поле "Enter text to translate".
+    - Нажмите кнопку "Translate".
+    - Переведенный текст отобразится в поле "Your translated text".
+
+Для отслеживания изменений в базе данных перейдите по адресу [http://localhost:8081](http://localhost:8081). Вы увидите интерфейс Adminer. Используйте следующие данные для входа:
+
+* System: PostgreSQL
+* Server: db
+* Username: user (либо Ваше изменённое имя пользователя) 
+* Password: password (либо Ваш изменённый пароль)
+* Database: translations
