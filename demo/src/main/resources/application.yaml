@@ -1,0 +1,63 @@
+server:
+  port: 8080
+
+google:
+  translator-uri: "https://script.google.com/macros/s/AKfycbye8HmoCku3NPWV6VqL3Vd1BOfkgb5wVRJaGJoIApS_Mg4wHJSvC-09b95-zaWq-arK4Q/exec"
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/translations
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+text:
+  languages:
+    en: English
+    ru: Russian
+    es: Spanish
+    fr: French
+    de: German
+    zh: Chinese
+    ja: Japanese
+    ko: Korean
+    it: Italian
+    pt: Portuguese
+    be: Belarusian
+    ar: Arabic
+    hi: Hindi
+    bn: Bengali
+    tr: Turkish
+    vi: Vietnamese
+    pl: Polish
+    nl: Dutch
+    sv: Swedish
+    da: Danish
+    fi: Finnish
+    he: Hebrew
+    th: Thai
+    id: Indonesian
+    ms: Malay
+    uk: Ukrainian
+    el: Greek
+    ro: Romanian
+    hu: Hungarian
+    cs: Czech
+    sk: Slovak
+    bg: Bulgarian
+    sr: Serbian
+    hr: Croatian
+    sl: Slovenian
+    lv: Latvian
+    lt: Lithuanian
+    et: Estonian
+    tl: Tagalog
+    fa: Persian
+    ur: Urdu
+    ta: Tamil
+    te: Telugu
+    kn: Kannada
+    ml: Malayalam
+    mr: Marathi
+    gu: Gujarati
+    pa: Punjabi
