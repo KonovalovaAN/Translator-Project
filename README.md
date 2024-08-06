@@ -61,7 +61,7 @@ demo
 
 #### 1) Скопируйте приложение:
 ```
-git clone [https://github.com/KonovalovaAN/test-repos.git](https://github.com/KonovalovaAN/t-bank-lab.git)
+git clone https://github.com/KonovalovaAN/t-bank-lab.git
 ```
 #### 2) Перейдите в корневую папку проекта.
 #### 3) Создайте файл .jar:
