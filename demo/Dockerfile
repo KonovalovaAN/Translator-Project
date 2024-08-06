@@ -8,4 +8,4 @@ WORKDIR /app
 COPY target/translator-0.0.1-SNAPSHOT /app/translator-0.0.1-SNAPSHOT
 
 # Запускаем приложение
-ENTRYPOINT ["java", "-jar", "/app/demo-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/translator-0.0.1-SNAPSHOT"]
