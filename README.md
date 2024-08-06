@@ -37,8 +37,8 @@ demo
 │   │   │               │   └── TranslationResourceAccessException.java
 │   │   │               ├── repository
 │   │   │               │   └── TranslationRepository.java
-│   │   │               ├── service
-│   │   │               │   ├── TextService.java
+│   │   │               └── service
+│   │   │                   ├── TextService.java
 │   │   │                   └── impl
 │   │   │                       └── TextServiceImplTest.java
 │   │   └── resources
