@@ -59,7 +59,7 @@ demo
 
 #### 1) Скопируйте приложение:
 ```
-git clone https://github.com/KonovalovaAN/t-bank-lab.git
+git clone https://github.com/KonovalovaAN/Translator-Project.git
 ```
 #### 2) Перейдите в корневую папку проекта.
 #### 3) Создайте файл .jar:
